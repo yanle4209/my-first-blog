@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>Blog de Yanle</title>
+	</head>
+	<body>
+		<h1><a href="/">Blog de Yanle</a></h1>
+		{% for post in posts %}
+			<div>
+				<p>Publicado: {{ post.published_date }}</p>
+				<h2><a href="">{{ post.title }}</a></h2>
+				<p>{{ post.text|linebreaks }}</p>
+			</div>
+		{% endfor %}
+	</body>
+</html>
